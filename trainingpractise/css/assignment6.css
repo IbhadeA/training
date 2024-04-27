@@ -1,0 +1,117 @@
+body{
+    font-family: "Noto Sans Tamil Supplement", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.background-image{
+    background-image: url('./image/bride1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+ /* Navigation menu styles */
+ .navigation{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Add space between the navigation and banner */
+    }
+ 
+ ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    /* font-weight: bold; */
+    display: flex;
+    align-items: center;
+ }
+
+ ul li{
+        display: inline-block;
+        text-decoration: none;
+        padding: 10px;
+        margin: 0 5px;
+        color: white;
+        cursor: pointer;
+        border-radius: 20px;
+
+    }
+
+
+    ul li:hover{
+        background-color: palevioletred;
+        color: white;
+    }
+
+    /* Banner styles */
+    .banner{
+        margin-top: 50px;
+        margin-right: 50px;
+        color: white;
+    }
+
+    .banner h1{
+        margin: 0;
+    }
+
+    /* Form container styles */
+    .form-container {
+        margin-top: 50px;
+        width: 30%;
+    }
+
+    .form-container h3 {
+        margin-top: 0;
+    }
+
+    /* Form input styles */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: palevioletred;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+/* icons styles */
+.icons{
+    margin-right: 20px; 
+}
+.icons a {
+        text-decoration: none;
+        color: palevioletred;
+        font-weight: bold;
+      
+    }
+
+      /* Terms & Conditions styles */
+      .terms-conditions {
+        color: pink;
+        cursor: pointer;
+        text-decoration: none;
+    }

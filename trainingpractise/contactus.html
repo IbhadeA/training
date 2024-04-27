@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Easter bunny school, easter bunny education, bunny school, easter education, easter school, christain school, catholic school">
+    <meta name="description" content=" Get the best education for your children at Easter bunny school">
+    <meta name="author" content="Ib Aimak">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+         /* Global styles */
+        body {
+            font-family:'Poppins', sans-serif; 
+        }
+
+         /* Banner styles */
+        .banner {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .banner img {
+            margin-right: 590px; 
+        }
+
+        .banner a {
+            text-decoration: none;
+            color: black;
+            margin-right: 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        /* Contact info styles */
+        .contact-info {
+            display: inline-block;
+            align-items: right;
+            margin-right: 20px;
+            font-size: 14px;
+        }
+
+        .contact-info span {
+            margin-right: 10px;
+        }
+
+         /* Navigation menu styles */
+        ul li{
+            display: inline-block;
+            text-decoration: none;
+            padding: 5px;
+            color: navy;
+            cursor: pointer;
+            margin-right: 90px;
+            border-radius: 20px;
+        }
+
+        ul li.active {
+            background-color: darkblue;
+            color: white;
+        }
+
+        ul li:hover{
+            background-color: navy;
+            color: white;
+        }
+
+         /* Heading menu container styles */
+        .heading-menu-container {
+            display: flex;
+            align-items: center;
+        }
+
+        h3 {
+            margin: 0; 
+        }
+
+        /* Social icons styles */
+        .social-icons a {
+            text-decoration: none;
+            color: blue;
+            margin-right: 15px; 
+        }
+
+         /* Image container styles */
+        .image-container {
+            position: relative;
+        }
+
+         /* Overlay styles */
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 2;
+        }
+
+        .overlay h2 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+    </style>
+</head>
+<body>
+    <div style="border: 1px solid white; height: 1400px; width: 100%;">       
+        <div style= "height: 100px; width: 100%;">
+            <div class="banner"><img src="./image/logo.jpg" alt="Easter Bunny School Log" width="4%" height="60px"> 
+               <a href="">Admissions</a>  <a href="">Term Dates</a>  <a href="">Calendar</a>
+                    <div class="contact-info"><span><i class="fa-solid fa-phone"></i>001 2344578</span>
+                <span><i class="fa-solid fa-envelope"></i>admin@easterbunnyschool.uk</span></div>
+            </div>
+            <div class="heading-menu-container">
+                <h3 style="color: darkblue;">Easter Bunny School</h3>
+                <ul style="font-weight: bold;">
+                    <a href="project1.html"><li>Home</li></a>
+                    <a href="aboutus.html"><li>About Us</li></a>
+                    <li>Term Dates</li>
+                    <li>Curriculum</li>
+                    <a href="contactus.html"><li class="active">Contact Us</li></a>
+                </ul>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="image-container" style="height: 400px; width: 100%; border-radius: 20px; overflow: hidden;">
+            <img src="./image/school-children-blue-uniform-2880px.jpg" alt="Easter Bunny School Playground" height="400px" width="100%">
+            <div class="overlay">
+                <h2>Contact Us</h2></div>
+        </div>
+        <div style="height: 600px; width: 100%;">
+            <div style="height: 600px; width: 50%; float: left;">
+            <div>
+                <form action="submit.html" method="post" style="margin-top: 40px;">
+                    <div style="margin-bottom: 20px; margin-left: 40px;">
+                        <div style="font-weight: bold; padding-bottom: 10px;">
+                        <label for="Full name"> Full Name<span style="color: red;">*</span></label></div>
+                        <input type="text" id="Full name" name="Full name" required style="width: 90%; height: 30px;">
+                    </div>
+
+                    <div style="margin-bottom: 20px; margin-left: 40px">
+                        <div style="font-weight: bold; padding-bottom: 10px;">
+                            <label for="email">Email<span style="color: red;">*</span></label>
+                        </div>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required style="width: 90%; height: 30px; float: left;">
+                    </div>
+
+                    <div style="margin-bottom: 20px; margin-left: 40px;">
+                        <div style="font-weight: bold; padding-bottom: 10px;">
+                            <label for="telephone">Telephone</label>
+                        </div>
+                        <input type="tel" id="telephone" name="telephone" style="width: 90%; height: 30px;">
+                    </div>
+
+                    <div style="margin-bottom: 20px; margin-left: 40px">
+                        <div style="font-weight: bold; padding-bottom: 10px">
+                        <label for="Subject"> Subject<span style="color: red;">*</span></label></div>
+                        <input type="text" id="Subject" name="Subject" required style="width: 90%; height: 30px;">
+                        </div>
+                    
+                    <div style="margin-bottom: 20px; margin-left: 40px;">
+                        <div style="font-weight: bold; padding-bottom: 10px">
+                        <label for="message">Message<span style="color: red;">*</span></label></div>
+                        <textarea id="message" name="message" placeholder="Type message here" required style="width: 90%; height: 100px;"></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit" style="margin-left: 40px; margin-top: 20px; background-color: brown; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+            <div style="height: 300px; width: 50%; float: right; font-size: 14px;">
+            <h3 style="clear: both; margin-top: 20px;">Our School</h3>
+            <p style="color: black;"><i class="fa-solid fa-location-dot" style="margin-right: 5px;"></i><span style="font-weight: bold;">Address:</span> 123 Carrot Road, Easter Island, 88888 </p>
+            <p style="color: black;"><i class="fa-solid fa-phone" style="margin-right: 5px;"></i><span style="font-weight: bold;">Phone:</span> 001 2344578 </p>
+            <p style="color: navy;"><i class="fa-solid fa-at" style="margin-right: 5px;"></i><span style="font-weight: bold;">Email:</span> <a href="mailto:admin@easterbunnyschool.uk" style="cursor: pointer; text-decoration: none; color: navy;">admin@easterbunnyschool.uk</a></p>
+            <hr style="border-top: 1px solid lightgray; margin-top: 10px; margin-bottom: 10px;">
+            <p style="color: black;"><i class="fa-solid fa-clock" style="margin-right: 5px;"></i><span style="font-weight: bold;">School Opening Hours:</span> Monday-Friday: 08:45 - 15:35 Weekends: Closed</p>
+            <hr style="border-top: 1px solid lightgray; margin-top: 10px; margin-bottom: 10px;">
+            <p style="color: navy;"><i class="fa-solid fa-at" style="margin-right: 5px;"></i><span style="font-weight: bold;">Head of School:</span> <a href="mailto:headteacher@easterbunnyschool.uk" style="cursor: pointer; text-decoration: none; color: navy;"> Mrs P Cottontail | headteacher@easterbunnyschool.uk</a></p>
+            <p style="color: navy;"><i class="fa-solid fa-at" style="margin-right: 5px;"></i><span style="font-weight: bold;">Administration Manager:</span><a href="mailto:admin@easterbunnyschool.uk" style="cursor: pointer; text-decoration: none; color: navy;"> Mrs A Trill | admin@easterbunnyschool.uk</a></p>
+            <p style="color: navy;"><i class="fa-solid fa-at" style="margin-right: 5px;"></i><span style="font-weight: bold;">SENDCo:</span><a href="mailto:send@easterbunnyschool.uk" style="cursor: pointer; text-decoration: none; color: navy;"> Mrs R Bubble-Gum | send@easterbunnyschool.uk</a></p>
+            </div>
+            <div style="height: 100px; width: 100%;">
+            <h3 style="margin: 10px;">Location Map</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3473.590861342475!2d-98.7569803247982!3d29.469955275217835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c418edac64f1d%3A0x6cc706c39ee348f7!2sEaster%20Island%2C%20San%20Antonio%2C%20TX%2078253%2C%20USA!5e0!3m2!1sen!2suk!4v1710196896447!5m2!1sen!2suk" width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        </div>
+        <div style="height: 200px; width: 100%;">
+            <div style="height: 200px; width: 20%; background-color:navy; float: left;">
+            <img src="./image/logo.jpg"alt="Easter Bunny School Log" width="70%" height="160px" style="border: 5px solid navy;"></div>
+            <div style="height: 200px; width: 40%; background-color: navy; float: left;">
+            <p style="color: white;">QUICK LINKS</p>
+            <ul style="list-style-type:none; color: white; padding-left: 0; display: flex; flex-direction: column; font-size: smaller;">
+                <li style="color: white; margin-right: 70px"><a href="aboutus.html" style="color: white;"><i class="fa-solid fa-chevron-right"></i> Welcome to Easter Bunny School</a></li>
+                <li style="color: white; margin-right: 70px"><i class="fa-solid fa-chevron-right"></i> Admissions</li>
+                <li style="color: white; margin-right: 100px"><i class="fa-solid fa-chevron-right"></i> Extra Curricular Activities</li>
+                <li style="color: white; margin-right: 100px"><i class="fa-solid fa-chevron-right"></i> Policies and Notices</li>
+                <li style="color: white; margin-right: 70px"><i class="fa-solid fa-chevron-right"></i> Term Dates</li>
+                <li style="color: white; margin-right: 70px"><a href="contactus.html" style="color: white;"><i class="fa-solid fa-chevron-right"></i> Contact us</a></li>
+            </ul>
+        </div>
+        <div style="height: 200px; width: 40%; background-color: navy; float: right;">
+            <p style="clear: both; color: white;">CONTACT US</p>
+            <p style="color: white;"><i class="fa-solid fa-location-dot"></i> Address: 123 Carrot Road<br>Easter Island, 88888 </p>
+            <p style="color: white;"><i class="fa-solid fa-phone"></i> Phone: 001 2344578 </p>
+            <p style="color: white;"><i class="fa-solid fa-envelope"></i> Email: admin@easterbunnyschool.uk</p>
+        </div>
+    </div>
+            <div style="height: 100px; width: 100%;">
+                <a href="" style="position: fixed; bottom: 20px; right: 20px; background-color: navy; color: white; padding: 10px 15px; border-radius: 50%; text-decoration: none;">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            <p style="background-color: lightblue;font-size: 14px;">© Easter Bunny School Copyright 2024. All Rights Reserved • Website by Ib Aimak</p></div>
+        </div>
+    </div>
+</body>
+</html>

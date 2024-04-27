@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Perfect Match</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil+Supplement&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="./css/assignment6.css" rel="stylesheet" type="text/css">
+<style>
+    body{
+        font-family: "Noto Sans Tamil Supplement", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0;
+        padding: 0;
+    }
+
+    .background-image{
+        background-image: url('./image/bride1.jpg'); 
+        background-size: cover;
+        background-position: center;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+     /* Navigation menu styles */
+     .navigation{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center; /* Center items vertically */
+        margin-bottom: 20px; /* Add space between the navigation and banner */
+        }
+     
+     ul{
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        /* font-weight: bold; */
+        display: flex;
+        align-items: center;
+     }
+
+     ul li{
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 5px;
+            color: white;
+            cursor: pointer;
+            border-radius: 20px;
+            background-color: burlywood;
+    
+        }
+
+    
+        ul li:hover{
+            background-color: palevioletred;
+            color: white;
+        }
+
+        /* Banner styles */
+        .banner{
+            margin-top: 50px;
+            margin-right: 50px;
+            color: white;
+        }
+
+        .banner h1{
+            margin: 0;
+        }
+
+        /* Form container styles */
+        .form-container {
+            margin-top: 50px;
+            width: 30%;
+        }
+
+        .form-container h3 {
+            margin-top: 0;
+        }
+
+        /* Form input styles */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: none;
+            background-color: palevioletred;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    /* icons styles */
+    .icons{
+        margin-right: 20px; 
+    }
+    .icons a {
+            text-decoration: none;
+            color: palevioletred;
+            font-weight: bold;
+          
+        }
+
+          /* Terms & Conditions styles */
+          .terms-conditions {
+            color: pink;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+</style>
+</head>
+<body>
+<!-- Background Image Section -->
+    <div class="background-image">
+ <!-- Navigation Section -->
+        <div class="Navigation" style="margin-top: 0px; margin-bottom: 150px; margin-right: 50px;";>
+            <div class="icons">
+                <!-- <a href=""><i class="fa-brands fa-facebook"></i> Match Fix</a>
+            </div> -->
+            <ul>
+                <a href="" style="padding-right: 350px; margin-left: 150px;"><i class="fa-brands fa-facebook"></i> <span style="color: white;font-size: 24px;"> Match Fix</span></a>
+                <a href="" style="font-weight: lighter;"><li>Home</li></a>
+                <a href="" style="font-weight: lighter;"><li>About Us</li></a>
+                <a href="" style="font-weight: lighter;"><li>Service</li></a>
+                <a href="" style="font-weight: lighter;"><li>Stats</li></a>
+                <a href="" style="font-weight: lighter;"><li>Testimonials</li></a>
+                <a href="" style="font-weight: lighter;"><li>Subscribe</li></a>
+            </ul>
+ <!-- Content Section -->
+            <div class="banner" style="float: left; padding-top: 50px; margin-top: 150px; margin-left: 150px;">
+                <h1>Matrimonal Search.</h1>
+                <h1 style="font-weight:lighter;">Best Matching Couples</h1>
+                <p>Discover the best services we offer!</p>
+                <a href=""><button style="border: 1px solid white; padding: 10px 30px; background-color: transparent; color: white;">Read More</button></a>
+            </div>
+ <!-- Registration Form Section -->
+            <div class="form-container" style="float: right; background-color: white; padding: 20px; margin-top: 100px;">
+                <h3 style="color: grey;">Register & Join our Matrimony</h3>
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required style="background-color: lightgrey;">
+                    <input type="email" name="email" placeholder="Your Email" required style="background-color: lightgrey;">
+                    <input type="text" name="contact number" placeholder="Contact Number" required style="background-color: lightgrey;">
+                    <select name="gender" required style="width: 100%; height: 35px; background-color: lightgrey; padding: 20px; margin: 10px 0px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 5px">
+                        <option value="">Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <input type="submit" value="Send Message">
+                    <p style="color: grey; font-size: smaller;">By Registering, you agree to our 
+                        <span class="terms-conditions">Terms & Conditions</span> </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
