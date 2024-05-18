@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="results"></p> -->
+    <!-- <h1 id="1">Hello World!</h1>
+    <form>
+        <p>
+            <label>First name</label>
+            <input type="text" name="firstname" id="1">
+        </p>
+        <p>
+            <label>Last Name</label>
+            <input type="text" name="lastname" id="2">
+        </p>
+        <p>
+            <label>Email</label>
+            <input type="text" name="email" id="3">
+        </p>
+        <p>
+            <label>Password</label>
+            <input type="password" name="password" id="4">
+        </p>
+        <p>
+            <label>Confirm Password</label>
+            <input type="text" name="confirm_password" id="5">
+        </p>
+        <button type="button" onclick="getformdetails()">Submit</button>
+    </form>
+    <button onclick="receiveNumber()" style="cursor: pointer; background-color: red; color: white;">START QUIZ</button> -->
+    
+    <!-- classwork -->
+   
+    <h1>Jamb result checker portal</h1>
+    <p id ="checkResults"></p>
+<form>
+    <p>
+        <label>center</label>
+        <select id="center">
+            <option value="">Select a center</option>
+            <option value="lagos">Lagos</option>
+            <option value="ogun">Ogun</option>
+            <option value="osun">Osun</option>
+        </select>
+    </p>
+    <p>
+        <label>score</label>
+        <input type="text" name="score" id="score">
+    </p>
+
+    <button type="button" onclick="checkResult()">Check Result</button>
+</form>
+
+    <script type="text/javascript">
+        // function receiveNumber()
+        // {
+        //     var number = prompt('Enter any number');
+        //     alert(number + ' is available');
+        // }
+
+        // var b =document.getElementById('1').value
+
+        // function getformdetails()
+        {
+            var firstname = document.getElementById ('1').value
+            var lastname = document.getElementById ('2').value
+            var email = document.getElementById ('3').value
+            var password = document.getElementById ('4').value
+            var confirmpassword = document.getElementById ('5').value
+            
+        }
+
+        // conditionals
+        // if(firstname == "" || lastname == "" || email == "" || confirmpassword == "" || password == "" ||)
+        // {
+        //     document.getElementById('results').innerHTML= 'Please complete the fields';
+        //     document.getElementById('results').style.color="red"
+        // }
+   
+//    classwork
+function checkResult()
+{
+    var center = document.getElementById('center').value;
+    var score = document.getElementById('score').value;
+
+    if (center == "" || score == "")
+{
+    alert('Kindly complete all fields')
+}
+else if (center != "" && score < 200)
+{
+    alert('You will need to rewrite this exam')
+}
+else if (center != "" && score >= 200)
+{
+    alert('Congratulations go for Post Utme')
+}
+}
+
+   </script>
+</body>
+</html>
