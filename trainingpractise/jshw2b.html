@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body {
+            position: relative;
+            margin: 40px;
+            padding: 10px;
+        }
+        .buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .buttons button {
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .blue-button {
+            background-color: blue;
+            color: white;
+        }
+        .green-button {
+            background-color: green;
+            color: white;
+        }
+    </style>   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="buttons">
+        <button class="blue-button" onclick="changeBackgroundColor('blue')">Settings One</button>
+        <button class="green-button" onclick="changeBackgroundColor('green')">Settings two</button>
+    </div>
+    <div>
+        <h1>Online Publication</h1>
+        <p>A royalty is a payment to an owner for the ongoing use of their asset or property, such as patent, copyrighted works, franchises or natural resources</p>
+        <h1>Another Heading</h1>
+        <p>A royalty is a payment to an owner for the ongoing use of their asset or property, such as patent, copyrighted works, franchises or natural resources</p>
+    </div>
+    
+<!-- javascript codes -->
+    <script type="text/javascript">
+        function changeBackgroundColor(color) 
+        {
+            document.body.style.backgroundColor = color;
+            document.body.style.color = 'white';
+        }
+
+
+    </script>
+</body>
+</html>

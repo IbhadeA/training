@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="color: red;">Login Here</h2>
+    <form>
+        <label>Username</label>
+        <input type="text" name="username" id="username" placeholder="Enter Username">
+        <label>Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter Password">
+        <button type="button" id="show-password-btn" onclick="showPassword()">Show Password</button>
+    </form>
+<!-- javascript codes -->
+    <script type="text/javascript">
+        function showPassword()
+        {
+            var password = document.getElementById('password');
+            var showPasswordBtn = document.getElementById('show-password-btn');
+
+            if (password.type === 'password') {
+                password.type = 'text';
+                showPasswordBtn.textContent = 'Hide Password';
+            } else {
+                password.type = 'password';
+                showPasswordBtn.textContent = 'Show Password';
+            }
+
+        }
+
+
+
+
+        
+        // If the type is "password", it changes it to "text" and updates the button text to "Hide Password".
+        // If the type is "text", it changes it back to "password" and updates the button text to "Show Password".
+    </script>
+</body>
+</html>
