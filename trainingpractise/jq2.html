@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- classwork 1 -->
+    <!-- <button id="registerButton">Register</button> -->
+    <!-- classwork 2 -->
+    <h2 style="color: red;">Login Here</h2>
+    <form>
+        <label for="fullname">Full Name</label>
+        <input type="text" name="fullname" id="fullname" placeholder="Full Name">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" placeholder="Email Address">
+        <label>
+            <input type="checkbox" name="terms" value="yes" id="terms"> I agree to the Fabric Software and Services Agreement
+        </label>
+        <button type="button" id="btns">Send Confirmation</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#btns').click(function(){
+                var fullname = $('#fullname').val();
+                var email = $('#email').val();
+                var terms = $('#terms').prop('checked');
+    
+                if(terms == false){
+                    alert('Kindly agree to the terms and conditions');
+                }else{
+                    alert('Link has been sent to your email');
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

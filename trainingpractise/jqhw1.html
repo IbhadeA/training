@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Amazon Ember', Arial, sans-serif; 
+            color: #333; 
+            padding: 20px; 
+        }
+        h3 {
+            font-size: 24px; 
+        }
+        
+        label {
+            display: block; /* Display labels as block elements */
+            margin-bottom: 10px; /* Add margin below each label */
+        }
+        #btns {
+            display: block;
+            width: 100%; 
+            margin-top: 10px; 
+            padding: 10px; 
+            background-color: #FF9900; 
+            color: black; 
+            border: none; 
+            border-radius: 5px; 
+            font-size: 16px; 
+            cursor: pointer; 
+        }
+        #btns:disabled {
+            opacity: 0.6; 
+            cursor: not-allowed; 
+        }
+    </style>
+</head>
+<body>
+    <h3>AWS Customer Agreement</h3>
+    <form>
+        <label>
+            <input type="checkbox" name="terms" value="yes" id="terms"> Check here to indicate that you have read and agree to the terms of the <a href="">AWS Customer Agreement</a> 
+        </label>
+        <button type="button" id="btns" style="background-color: darkgoldenrod;"disabled>Create Account and Continue</button>
+    </form>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script>
+        $(document).ready(function(){
+            $('#terms').change(function(){
+            if ($('#terms').is(':checked') === true) {
+                $('#btns').prop('disabled', false);
+            } else {
+                $('#btns').prop('disabled', true);
+            }
+        });
+        });
+     </script>
+</body>
+</html>

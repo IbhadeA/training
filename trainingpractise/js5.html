@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Converter</title>
+</head>
+<body>
+    <script>
+        let userprompt = parseInt(prompt("Please enter your numerical grade (between 0 and 100)"));
+
+        var output = "";
+        
+        if (userprompt >= 0 && userprompt <= 100) {
+            switch(true){
+                case (userprompt >= 90 && userprompt <= 100):
+                    output = "A";
+                    break;
+                case (userprompt >= 80 && userprompt < 90):
+                    output = "B";
+                    break;
+                case (userprompt >= 70 && userprompt < 80):
+                    output = "C";
+                    break;
+                case (userprompt >= 60 && userprompt < 70):
+                    output = "D";
+                    break;
+                case (userprompt >= 0 && userprompt < 60):
+                    output = "F";
+                    break;
+                default:
+                    output = "Invalid grade";
+            }
+        
+        }
+
+        alert("Your grade is: " + output);
+    </script>
+</body>
+</html>
+
+
+<!-- // Let's grade a grade converter
+// Please enter your numerical grade (between 0 and 100) and it will convert it into a letter grade. 
+
+// grade >=90 && grade <=100 - A
+// grade >=80 && grade <90 -B
+// grade >=70 && grade <80 - C -->

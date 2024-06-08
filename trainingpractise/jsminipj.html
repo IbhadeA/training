@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        img {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+        select {
+            margin-right: 10px;
+        }
+        .btn-enter-prize {
+            background-color: red;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>APEX STORE</h2>
+    <p>This store is currently running a promo for online shoppers. There will be a VALENTINE'S DAY prize draw <b>for customers who purchase goods worth up to N20,000 or up to 10 items in one transaction.</b></p>
+
+    <h3>Shopping Bag</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <p>Item</p>
+                <img src="/trainingpractise/image/Blueshoe.jpeg" alt="Blue Trainers">
+            </div>
+            <div class="col-md-3">
+                <label for="quantity1">Quantity:</label>
+                <select id="quantity1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div> 
+            <div class="col-md-3">
+                <p>Price:</p>
+                <input type="text" name="Price" value="4000" id="price1">
+            </div>
+            <div class="col-md-3">
+                <p>Check:</p>
+                <span id="total1"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="/trainingpractise/image/whiteshoe.jpeg" alt="White Trainers">
+            </div>
+            <div class="col-md-3">
+                <label for="quantity2">Quantity:</label>
+                <select id="quantity2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <p>Price:</p>
+                <input type="text" name="Price" value="3000" id="price2">
+            </div>
+            <div class="col-md-3">
+                <p>Check:</p>
+                <span id="total2"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="/trainingpractise/image/greyshoe.jpeg" alt="Grey Trainers">
+            </div>
+            <div class="col-md-3">
+                <label for="quantity1">Quantity:</label>
+                <select id="quantity1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div> 
+            <div class="col-md-3">
+                <p>Price:</p>
+                <input type="text" name="Price" value="5000" id="price1">
+            </div>
+            <div class="col-md-3">
+                <p>Check:</p>
+                <span id="total1"></span>
+            </div>
+        </div>
+        <!-- Add more items here as needed -->
+
+    </div>
+
+    <button class="btn-enter-prize" onclick="checkPromo()">Enter Prize Draw</button>
+
+    <script>
+        function checkPromo() {
+            var totalPrice = parseInt(document.getElementById("price1").value) * parseInt(document.getElementById("quantity1").value) +
+                             parseInt(document.getElementById("price2").value) * parseInt(document.getElementById("quantity2").value);
+            var totalItems = parseInt(document.getElementById("quantity1").value) + parseInt(document.getElementById("quantity2").value);
+            
+            if (totalPrice >= 20000 || totalItems <= 10) {
+                var averageSpent = totalPrice / totalItems;
+                alert("Congratulations! You are qualified for our Valentine's Day promo.\nNumber of items purchased: " + totalItems + "\nAverage spent: N" + averageSpent.toFixed(2) + "\nTotal price in Naira: N" + totalPrice);
+                
+            } else {
+                alert("Thank you for shopping with us.\nNumber of items purchased: " + totalItems + "\nAverage spent: N" + (totalPrice / totalItems).toFixed(2) + "\nTotal amount spent: N" + totalPrice + "\nShop more to qualify for our Valentine's Day promo");
+                 
+            }
+        }
+    </script>
+</body>
+</html>
