@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dropdown</title>
+</head>
+<body>
+    <label> Names of Student in Dev training</label>
+    <select id="studentDropdown"></select>
+  
+  <script type="text/javascript">
+  var students = ["Select a student", "John", "Wole", "Damibelles", "Ms Oke", "Obafumilayo"];
+  var length = students.length;
+  var dropdown = document.getElementById("studentDropdown");
+  
+  
+  for (var a=0; a<length; a++) 
+  {
+    var option = document.createElement("option"); 
+    option.text = students[a]; 
+    dropdown.add(option); 
+  }
+  </script>
+  
+</body>
+</html>
