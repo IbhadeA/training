@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div style="border: 1px orange solid; padding: 20px;">
+    <h2>AbokiFx Currency Converter</h2>
+<form>
+    <label>Enter a Value in USD</label>
+    <input type="number" name="enter a value in USD" id="USD" placeholder="enter a value in USD">
+    <button type="button" onclick="checkCurrency()" style="background-color: red; color: white; border-radius: 5px; border-color: red;">Convert to Naira</button>
+</form>
+</div>
+     <!-- javascript codes-->
+    <script type="text/javascript">
+        function checkCurrency()
+        {
+            var naira = 536;
+            var usdValue = document.getElementById('USD').value;
+            var usdAmount = parseFloat(usdValue);
+            var conversion = naira * usdAmount
+            alert('$' + usdAmount + ' is ' + conversion + ' naira');
+        }
+
+
+    </script>
+</body>
+</html>

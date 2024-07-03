@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+  
+    <h2>JavaScript Calculator</h2>
+    <form>
+        <label>Number 1</label>
+        <input type="number" id="numberOne">
+        <label>Number 2</label>
+        <input type="number" id="numberTwo">
+        <button type="button" onclick="calculate('add')">Add</button>
+        <button type="button" onclick="calculate('subtract')">Subtract</button>
+        <button type="button" onclick="calculate('divide')">Divide</button>
+    </form>
+    <script type="text/javascript">
+        function calculate(operation) {
+            var numberOne = parseFloat(document.getElementById('numberOne').value);
+            var numberTwo = parseFloat(document.getElementById('numberTwo').value);
+            var result;
+
+            if (operation == 'add') {
+                result = numberOne + numberTwo;
+            } else if (operation == 'subtract') {
+                result = numberOne - numberTwo;
+            } else if (operation == 'divide') {
+                result = numberOne / numberTwo;
+            }
+
+            alert('Result: ' + result);
+        }
+
+
+        // classwork
+        var gender = prompt('Enter your gender')
+
+        if ( gender == 'female')
+        {
+        alert('Shoes and bags are available for sale');
+        }
+        else if (gender == 'male')
+        {
+        alert('We have phone for sale');
+        }
+        else
+        {
+        alert('Please enter gender');
+        }
+
+
+    </script>
+</body>
+</html>

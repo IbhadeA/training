@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Merienda:wght@300..900&family=Noto+Sans+Tamil+Supplement&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi+Fun:wght@400..700&family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+        /* Announcement ribbon styles */
+        .announcement-ribbon {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            font-family: var(--font-family);
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* Hover effect for the announcement ribbon */
+        .announcement-ribbon:hover {
+            background-color: darkred; /* Changes background color to darker red when hovered over */
+        }
+
+        /* Background image container styles */
+        .hero-section {
+            background-image: url('/group5/images/image\ \(00\).jpeg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            text-align: left;
+            color: white;
+            height: 70vh;
+            min-height: 516px;
+        }
+
+        /* Hero section text box styles */
+        .hero-text {
+            /* background-color: white; */
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        /* Button styles */
+        .btn-donate {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .btn-donate:hover {
+            background-color: white;
+            color: red;
+            border: 1px solid red;
+        }
+
+        /* Styles for small screens */
+        @media (max-width: 767px) {
+            /* Add a white background to the text */
+            .text-container {
+                background-color: white;
+                padding: 10px;
+                border-radius: 5px;
+                text-align: center;
+            }
+
+            /* Change the text color */
+            .text-container h1,
+            .text-container p {
+                color: black;
+            }
+        }
+
+    .custom-heading {
+        font-size: 2.5rem; /* Font size of 2.5rem */
+        line-height: 2.75rem; /* Line height of 2.75rem */
+    }
+
+    .custom-text {
+        font-size: 1.5rem; /* Set the font size */
+        line-height: 2rem; /* Set the line height */
+    }
+
+    /* Section with two columns styles */
+        .section {
+            padding: 50px 20px;
+        }
+
+    /* Card styles */
+        .card {
+            border: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card-title {
+            color: red;
+            font-weight: bold;
+        }
+
+        .card-text {
+            margin-bottom: 20px;
+        }
+
+        .btn-outline-red {
+            border: 1px solid red;
+            color: red;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .btn-outline-red:hover {
+            background-color: red;
+            color: white;
+        }
+
+        /* Ensure the images maintain a consistent aspect ratio and are contained within their parent */
+        .card-img-top {
+            object-fit: cover;
+        }
+
+    /* Style for each card to ensure equal height */
+    .card {
+        height: 100%;
+        }
+
+    /* Custom button width for smaller screens */
+    @media (max-width: 576px) {
+    .btn {
+        width: 100%;
+    }
+    }
+    .icons{
+        font-size: 250%;
+        font-weight: bolder;
+        color: red; 
+        justify-content: center;
+    }
+    .icons:hover{
+        color: green;
+    }
+    .footersection1{
+        text-decoration: none;
+        color: black;
+    }
+    .footersection1:hover{
+        background-color:gray;
+        color: white;
+    }
+    .read{
+       color: grey;
+    }
+    .read:hover{
+        background-color: grey;
+        color: white;
+    }
+    .icon{
+        color: red;
+        font-size: 18px;
+        justify-items: flex-end;
+    }  
+    </style>
+</head>
+<body>
+  
+     <!-- Navbar starts here -->
+     <div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <!-- <a class="nav-link active" href="#">My Red Cross</a> -->
+                <ul class=" navbar-nav me-auto mb-2 mb-lg-0" id="Y">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">My Red Cross</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">First Aid</a>
+                      </li>
+                  <li class="nav-item">
+                    <a class="nav-link active " aria-current="page" href="#">Shop</a>
+                  </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                <button class=" my-2 my-sm-0" type="submit"><i class="fas fa-search search-icon"></i></button>
+                  </form>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active text-black" aria-current="page" href="#">Contact Us</a>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </nav>
+    </div>
+    <!-- Navbar ends here -->
+    <!-- Header Start here -->
+    <div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div id="Z" class="container-fluid">
+                <i class="fas fa-cross big-bold-red-cross"></i>
+              <a class="navbar-brand " href="#">Australian <br>Red Cross</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav justify-content-evenly me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-black" aria-current="page" href="#">Get help</a>
+                      </li>
+                  <li class="nav-item">
+                    <a class="nav-link active text-black" aria-current="page" href="#">Act for humanity</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active text-black" aria-current="page" href="#">Ways to donate</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active text-black" aria-current="page" href="#">Stories</a>
+                  </li>
+                  </li>
+                </ul>
+                <button class="btn btn-donate mt-3">Donate</button>
+            </div>
+            </div>
+          </nav>
+    </div>
+    <div>
+        <div class="d-flex flex-row mb-3git justify-content-evenly">
+            <div class="p-2">
+                <h4>Emergencies and dissasters</h4>
+                <p class="pt-3">Practical help and resources before, during <br> and after emergencies.</p>
+            </div>
+            <div class="p-2">
+                <h4>Community Services</h4>
+                <p class="pt-3">Services for people failing through the gaps,<br> including those experiencing homlessness <br>
+                and loneliness.</p>
+            </div>
+            <div class="p-2">
+                <h4>Migrant in transition</h4>
+                <p class="pt-3">Programs to suppot refugees, people seeking <br>asylum or in immigration detention and other <br>
+                    who are vulnerable as a result of migration.</p>
+            </div>
+          </div>
+    </div>
+    <!-- Header ends here -->
+   
+    <!-- Content starts here -->
+     <!-- Announcement ribbon -->
+     <div class="announcement-ribbon">
+        After a distressing event: information for communities, parents and caregivers  >
+    </div>
+
+    <!-- Hero section with background image -->
+    <!-- <div class="hero-section">
+        <div class="hero-text">
+            <h1 style="color: red;">Make a Lasting Impact</h1>
+            <p style="color: black;">Your kindness can change lives</p>
+            <button class="btn btn-red">Donate Today</button>
+        </div>
+    </div> -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="row">
+                <!-- Column for hero text and button -->
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-start">
+                    <!-- Text container for small screens -->
+                    <div class="text-container mt-5">
+                        <h1 class="mb-3 fw-bold custom heading">Make a Lasting <br>Impact</h1>
+                        <p class="custom-text">Your kindness can change lives</p>
+                        <!-- Button -->
+                    <button class="btn btn-donate mt-3">Donate Today</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section with two columns -->
+    <div class="container section">
+        <div class="row">
+            <!-- Column 1 -->
+            <div class="mb-2 col-12 col-md-6 col-lg-6 left">
+                <div class="card border border-tertiary">
+                    <img src="/group5/images/image (02).webp" alt="Someone donating" class="card-img-top w-100 h-100">
+                    <div class="card-body text-start">
+                        <a href="#" class="text-decoration-none text-dark">
+                        <h5 class="card-title fs-6 mb-2 p-1">RED CROSS SHOPS</h5>
+                        </a>
+                        <a href="#" class="text-decoration-none text-dark">
+                            <h4 class="card-text fw-bold mb-2 p-1">Donate your best so we can do ours.</h4>
+                        </a>
+                        <p class="card-text text-secondary mb-4 p-1 ">Right now, Australian Red Cross Shops need your quality clothing and accessories to raise funds for people facing hardship, crisis, and disaster.</p>
+                        <div class="mt-4">
+                            <button class="btn btn-outline-red w-100 w-auto">Learn More</button>
+                    </div>
+                 </div>
+               </div>
+            </div>
+            
+            <!-- Column 2 -->
+            <div class="mb-2 col-12 col-md-6 col-lg-6 left">
+                <div class="card border border-tertiary">
+                    <img src="/group5/images/image (03).webp" alt="Flodded Bridge" class="card-img-top w-100 h-100">
+                    <div class="card-body text-start">
+                        <a href="#" class="text-decoration-none text-dark">
+                        <h5 class="card-title fs-6 mb-2 p-1">EMERGENCIES</h5>
+                        </a>
+                        <a href="#" class="text-decoration-none text-dark">
+                            <h4 class="card-text fw-bold mb-2 p-1">In an emergency every second counts. Are you prepared?</h4>
+                        </a>
+                        <p class="card-text text-secondary mb-4 p-1">This summer saw an increase in severe weather: higher than expected flooding, earlier cyclones, and extreme heat. You can prepare for extreme weather with our Get Prepared app.</p>
+                        <div class="mt-4">
+                            <button class="btn btn-outline-red w-100 w-auto">Find out more</button>
+                    </div>
+                 </div>
+               </div>
+            </div>
+        
+     <!-- Section with two columns -->
+     <div class="container section">
+        <div class="row">
+            <!-- Column 1 -->
+            <div class="mb-2 col-12 col-md-6 col-lg-6 left">
+                <div class="card border border-tertiary">
+                    <img src="/group5/images/Image (4).png" alt="Someone donating" class="card-img-top w-100 h-100">
+                    <div class="card-body text-start">
+                        <a href="#" class="text-decoration-none text-dark">
+                        <h5 class="card-title fs-6 mb-2 p-1">UPDATE</h5>
+                        </a>
+                        <a href="#" class="text-decoration-none text-dark">
+                            <h4 class="card-text fw-bold mb-2 p-1">Israel and the Occupied Palestinian Territories</h4>
+                        </a>
+                        <p class="card-text text-secondary mb-4 p-1"></p>
+                        <div class="mt-4">
+                            <button class="btn btn-outline-red w-100 w-auto">Learn more</button>
+                    </div>
+                 </div>
+               </div>
+            </div>
+            
+            <!-- Column 2 -->
+            <div class="mb-2 col-12 col-md-6 col-lg-6 left">
+                <div class="card border border-tertiary">
+                    <img src="/group5/images/image(05).jpeg" alt="3 Friends" class="card-img-top w-100 h-100">
+                    <div class="card-body text-start">
+                        <a href="#" class="text-decoration-none text-dark">
+                        <h5 class="card-title fs-6 mb-2 p-1">COMMUNITY SUPPORT</h5>
+                        </a>
+                        <a href="#" class="text-decoration-none text-dark">
+                            <h4 class="card-text fw-bold mb-2 p-1">Helping young people in crisis feel human again</h4>
+                        </a>
+                        <p class="card-text text-secondary mb-4 p-1">Our Night Café is a safe after-hours space for people aged 12 to 25 experiencing or at risk of homelessness in Brisbane.</p>
+                        <div class="mt-4">
+                            <button class="btn btn-outline-red w-100 w-auto">Read more</button>
+                    </div>
+                 </div>
+               </div>
+            </div>
+    </div>
+    <!-- Content ends here -->
+    <!-- Footer starts here -->
+    <div class="container-fluid">
+        <div class="col-md-12 pt-5 pb-5">
+            <div class="row">
+                <div class="col-md-3">
+                    <h2 class="pt-10 py-5">Contact us</h2>
+                </div>
+                <div class="col-md-3 text-center"> 
+                    <a href="1800 733 276"><i class="bi bi-telephone-fill icons"></i></a>
+                    <br>
+                    <br>
+                    <a href="1800 733 276" class="footersection1">Call our Customer care Team <br><strong>1800 733 276</strong></a>
+                </div>
+                <div class="col-md-3 text-center">
+                    <a href="https://www.redcross.org.au/contact/#map"><i class="bi bi-geo-alt-fill icons"></i></a>
+                    <br>
+                    <br>
+                    <a href="https://www.redcross.org.au/contact/#map" class="footersection1">Find Red Cross offices, shops and first training near you</a>
+                </div>
+                <div class="col-md-3 text-center">
+                    <a href="https://australianredcross.zendesk.com/hc/en-us/requests/new?ticket_form_id=900001452143"><i class="bi bi-pencil-square icons"></i></a>
+                    <br>
+                    <br>
+                    <a href="https://australianredcross.zendesk.com/hc/en-us/requests/new?ticket_form_id=900001452143" class="footersection1">Send us a message</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 pt-5 pb-5 bg-secondary-subtle">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="https://www.redcross.org.au/globalassets/recognition-logo.png" style="width: 100px; height: 200px;padding-left: 15px;">
+                </div>
+                <div class="col-md-10" style="padding-top: 10px;">
+                    <h6><strong>Red Cross pays our respects to the Aboriginal and Torres Strait Islander custodians of the country where we work, and to Elders, past, present and emerging.</strong></h6>
+                    <br>
+                    <p>Learn about our <a href="https://www.redcross.org.au/governance/reconciliation-action-plan/" class="read">Reconciliation Action Plan</a> and how we <a href="https://www.redcross.org.au/act/make-reconciliation-real/" class="read">can all make reconciliation real.</a></p>
+                    <br>
+                    <p>This website may contain the images, voices or names of people who have passed away.</p></div>
+                </div>
+            </div>
+        <div class="col-md-12 pt-5 pb-5 bg-body-secondary">
+            <div class="row">
+                <div class="col-md-3">
+                    <div style="padding-left: 5%;">
+                        <img src="https://www.redcross.org.au/globalassets/cms-assets/image-gallery/icons/logo-registeredcharity.png" style="width: 80px;padding-left:20;">
+                    </div>
+                    <div style="padding-left: 10%; padding-top: 35%;">
+                            <h6>Connect with us</h6>
+                            <a href="#"><i class="bi bi-facebook icon"></i></a>
+                            <a href="#"><i class="bi bi-instagram icon"></i></a>
+                            <a href="#"><i class="bi bi-twitter icon"></i></a>
+                            <a href="#"><i class="bi bi-youtube icon"></i></a>
+                            <a href="#"><i class="bi bi-linkedin icon"></i></a>
+                            <a href="#"><i class="bi bi-tiktok icon"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h6>About</h6>
+                    <p>We are Red Cross</p>
+                    <p>How we're run</p>
+                    <p>Research and reports</p>
+                    <p>History and heritage</p>
+                    <p>Careers</p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Resources</h6>
+                    <p>For school students</p>
+                    <p>For parents and educators</p>
+                    <p>For businesses</p>
+                    <p>For journalists</p>               
+                </div>
+                <div class="col-md-3">
+                    <h6>More</h6>
+                    <p>International Humanitarian Law</p>
+                    <p>Global Migration Lab</p>
+                    <p>Humanitech</p>
+                    <p>Lifeblood</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 pt-3 pb-3">
+            <p>Privacy | Terms | Cookies | Security</p>
+            <p style="font-size: small; color: gray;">Charity donations of $2 or more to Australian Red Cross may be tax deductible in Australia. Site protected by Google Invisible reCAPTCHA. © Australian Red Cross 2024. ABN 50 169 561 394</p>
+        </div>
+
+    </div>
+    <!-- Footer ends here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>   
+</body>
+</html>

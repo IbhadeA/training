@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online COVID-19 Self Assessment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .container div {
+            flex: 1;
+            padding: 20px;
+        }
+        .container img {
+            width: 100%;
+            height: auto;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 300px;
+        }
+        .form-container label, .form-container select {
+            margin-bottom: 10px;
+        }
+        .form-container button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        p::before {
+            content: "** ";
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+<h2>Online COVID-19 Self Assessment</h2>
+<div class="container">
+    <div>
+        <p> Please complete this short survery</p>
+        <img src="/trainingpractise/image/images-4.jpeg" alt="COVID-19">
+    </div>
+    <div class="form-container">
+        <form>
+            <label>Are you coughing?</label>
+            <select name="coughing" id="coughing">
+                <option value="">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <label>Did you travel out of Nigeria within the last 6 months?</label>
+            <select name="travel" id="travel">
+                <option value="">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <button type="button" onclick="diagnose()">Diagnose</button>
+        </form>
+    </div>
+</div>
+    <script type="text/javascript">
+        function diagnose()
+        {
+            var coughing = document.getElementById('coughing').value;
+            var travel = document.getElementById('travel').value;
+
+            if (coughing == 'yes' || travel == 'yes') {
+                alert('Please take a COVID test');
+            } else if (coughing == 'no' && travel == 'no') {
+                alert('Please stay safe');
+            } else {
+                alert('Please select valid options for both questions.');
+            }
+        }
+            
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Store</title>
+    <style>
+        /* Font for the page */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        /* Centers the main content and sets the width */
+        .wrapper {
+            width: 80%;
+            margin: 20px auto; /* Center the wrapper and add top margin */
+        }
+        /* Makes the container a flexbox column */
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        /* Styles for rows, aligning items and adding margins and padding */
+        .row, .header-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+        /* Makes the header row text bold */
+        .header-row {
+            font-weight: bold;
+        }
+        /* Defines column behavior, aligns items to start (left), and text alignment */
+        .col-md-3 {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+        }
+        /* Styles images */
+        img {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+        /* Styles for select and input elements */
+        select, input {
+            width: 80%;
+            padding: 5px;
+        }
+        /* Styles for the enter prize button */
+        .btn-enter-prize {
+            background-color: red;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            border: 3px solid lightpink;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        /* Base alert style: aligns items, padding, margin, and removes background */
+        .alert {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            background: none; 
+        }
+        /* Styles images inside alerts to make them bigger */
+        .alert img {
+            width: 80px; /* Make images bigger */
+            height: auto;
+            margin-right: 10px;
+        }
+        /* Styles horizontal lines */
+        hr {
+            border: none;
+            border-top: 1px solid lightgrey;
+            width: 100%;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>APEX STORE</h2>
+        <p>This store is currently running a promo for online shoppers. There will be a VALENTINE'S DAY prize draw <b>for customers who purchase goods worth up to N20,000 or up to 10 items in one transaction.</b></p>
+
+        <h3>Your Shopping Bag...</h3>
+        <hr>
+        <div class="container">
+            <!-- Header row for item details -->
+            <div class="header-row">
+                <div class="col-md-3">Item</div>
+                <div class="col-md-3">Quantity</div>
+                <div class="col-md-3">Price</div>
+                <div class="col-md-3">Check</div>
+            </div>
+            <hr>
+            <!-- Row for the first item -->
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="/trainingpractise/image/Blueshoe.jpeg" alt="Blue Trainers">
+                </div>
+                <div class="col-md-3">
+                    <select id="quantity1" onchange="calculateTotal(1)">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" name="Price" value="4000" id="price1" readonly>
+                </div>
+                <div class="col-md-3">
+                    <span id="total1">4000</span>
+                </div>
+            </div>
+            <hr>
+            <!-- Row for the second item -->
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="/trainingpractise/image/whiteshoe.jpeg" alt="White Trainers">
+                </div>
+                <div class="col-md-3">
+                    <select id="quantity2" onchange="calculateTotal(2)">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" name="Price" value="3000" id="price2" readonly>
+                </div>
+                <div class="col-md-3">
+                    <span id="total2">3000</span>
+                </div>
+            </div>
+            <hr>
+            <!-- Row for the third item -->
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="/trainingpractise/image/greyshoe.jpeg" alt="Grey Trainers">
+                </div>
+                <div class="col-md-3">
+                    <select id="quantity3" onchange="calculateTotal(3)">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" name="Price" value="5000" id="price3" readonly>
+                </div>
+                <div class="col-md-3">
+                    <span id="total3">5000</span>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Button -->
+        <button class="btn-enter-prize" onclick="checkPromo()">Enter Prize Draw</button>
+        <!-- Div to show the promo message -->
+        <div id="promoMessage"></div>
+    </div>
+
+    <script type="text/javascript">
+        // Function to calculate total price per item
+        function calculateTotal(itemNumber) {
+            var quantity = parseInt(document.getElementById('quantity' + itemNumber).value);
+            var price = parseInt(document.getElementById('price' + itemNumber).value);
+            var total = quantity * price;
+            document.getElementById('total' + itemNumber).textContent = total;
+        }
+
+        // Function to check if the user qualifies for the promo
+        function checkPromo() {
+            // Calculate total price and total items
+            var totalPrice = parseInt(document.getElementById("total1").textContent) +
+                             parseInt(document.getElementById("total2").textContent) +
+                             parseInt(document.getElementById("total3").textContent);
+
+            var totalItems = parseInt(document.getElementById("quantity1").value) +
+                             parseInt(document.getElementById("quantity2").value) +
+                             parseInt(document.getElementById("quantity3").value);
+
+            // Get the promo message div and clear previous messages
+            var promoMessageDiv = document.getElementById("promoMessage");
+            promoMessageDiv.innerHTML = "";
+
+            // Check if the user qualifies for the promo
+            if (totalPrice >= 20000 || totalItems >= 10) {
+                var averageSpent = totalPrice / totalItems;
+                promoMessageDiv.innerHTML = `
+                    <div class="alert alert-success">
+                        <img src="/trainingpractise/image/qualified.png" alt="Qualified">
+                        Congratulations! You are qualified for our Valentine's Day promo.<br>
+                        Number of items purchased: ${totalItems}<br>
+                        Average spent: N${averageSpent.toFixed(2)}<br>
+                        Total price in Naira: N${totalPrice}
+                    </div>
+                `;
+            } else {
+                promoMessageDiv.innerHTML = `
+                    <div class="alert alert-danger">
+                        <img src="/trainingpractise/image/tryagain.jpeg" alt="Try Again">
+                        Thank you for shopping with us.<br>
+                        Number of items purchased: ${totalItems}<br>
+                        Average spent: N${(totalPrice / totalItems).toFixed(2)}<br>
+                        Total amount spent: N${totalPrice}<br>
+                        Shop more to qualify for our Valentine's Day promo
+                    </div>
+                `;
+            }
+        }
+
+        // Initialise totals when the page loads
+        calculateTotal(1);
+        calculateTotal(2);
+        calculateTotal(3);
+    </script>
+</body>
+</html>
