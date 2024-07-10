@@ -5,8 +5,9 @@ $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
 $email = $_POST['email'];
 $phoneNumber = $_POST['phone_number'];
+$Password = $_POST['password'];
 
-if(empty($firstname) || empty($lastname) || empty($email) || empty($phoneNumber))
+if(empty($firstname) || empty($lastname) || empty($email) || empty($phoneNumber)|| empty($Password))
 {
     echo "please complete the fields";
 }else{
@@ -14,7 +15,7 @@ if(empty($firstname) || empty($lastname) || empty($email) || empty($phoneNumber)
     
     include_once("user.php");
     $user = new User();
-    $reg = $user->register($firstname,$lastname,$email,$phoneNumber);
+    $reg = $user->register($firstname,$lastname,$email,$phoneNumber,$Password);
    
     if ($reg == true)
     {
