@@ -1,5 +1,10 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
 
+<?php
 
 $email = $_POST['email'];
 $Password = $_POST['password'];
@@ -17,6 +22,7 @@ if(empty($email) || empty($Password))
     if ($result == true)
     {
         echo "Login successful";
+        header("Location: dashboard.php");
     }else{
         echo "Error trying to login... Try again later";
     }
