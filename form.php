@@ -20,6 +20,11 @@
             <label>email</label>
             <input type="text" name="email" class="form-control">
         </p>
+        <select name="city">
+            <label>Select State</label>
+            <option value="ogun">Ogun</option>
+
+        </select>
         <p>
             <label>Phone Numnber</label>
             <input type="text" name="phone_number" class="form-control">

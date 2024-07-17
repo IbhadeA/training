@@ -45,6 +45,10 @@ class User{
             $row= $dbcon->fetch_assoc();
             $hashedpassword=$row['Password'];
             $result= password_verify($password,$hashedpassword);
+            session_start();
+            $_SESSION['firstname']=$row['firstname'];
+            $_SESSION['id']=$row['id'];
+            $_SESSION['websecurity'] = "123@@abc";
             if($result){
                 return true;
             } else {
@@ -54,6 +58,33 @@ class User{
 
         }
     }
+
+    public function getAllUsers()
+    {
+        $sql = "SELECT * FROM user";
+        $dbcon = $this->dbcon->query($sql);
+        $result = array();
+        if($this->dbcon->affected_rows >0){
+        while($row= $dbcon->fetch_assoc()){
+            $result[] = $row;
+                 }
+                 return $result;
+        }else{
+            return $result;
+        }
+    }
+
+   public function getSingleUser($id)
+   {
+    $sql = "SELECT * FROM user WHERE id= '$id'";
+    $dbcon = $this->dbcon->query($sql);
+    if($this->dbcon->affected_rows ==1){
+        $row= $dbcon->fetch_assoc();
+        return $row;
+       } else {
+        return false;
+       }
+   } 
 
 }
 
