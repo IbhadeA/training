@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+// this app.js is the root/main component that wraps other components
 import './App.css';
+// import Header from './components/Header';
+// import Greet from './components/Greet';
+import Name from './components/Name';
+import Job from './components/Job';
+import Hobbies from './components/Hobbies';
+// import './index.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          This is my first react app
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container text'>
+      <Name/>
+      <Job/>
+      <Hobbies/>
+     
+      {/* <Header/>
+      <Greet/> */}
+    
+
     </div>
   );
 }
