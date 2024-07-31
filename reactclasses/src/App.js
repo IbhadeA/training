@@ -2,18 +2,26 @@
 import './App.css';
 // import Header from './components/Header';
 // import Greet from './components/Greet';
-import Name from './components/Name';
-import Job from './components/Job';
-import Hobbies from './components/Hobbies';
-// import './index.css';
+// import Name from './components/Name';
+// import Job from './components/Job';
+// import Hobbies from './components/Hobbies';
+// import ParentComponent from './components/props/ParentComponent';
+import Counter from './components/props/Counter';
 
 
 function App() {
   return (
     <div className='container text'>
-      <Name/>
+      {/* <h2>State</h2> */}
+      <Counter/>
+      
+      {/* props */}
+      {/* <ParentComponent/> */}
+      
+      {/* components */}
+      {/* <Name/>
       <Job/>
-      <Hobbies/>
+      <Hobbies/> */}
      
       {/* <Header/>
       <Greet/> */}
