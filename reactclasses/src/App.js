@@ -6,14 +6,26 @@ import './App.css';
 // import Job from './components/Job';
 // import Hobbies from './components/Hobbies';
 // import ParentComponent from './components/props/ParentComponent';
-import Counter from './components/props/Counter';
+// import Counter from './components/props/Counter';
+// import HandlingEvents from './components/HandlingEvents';
+// import HandlingEventonChange from './components/HandlingEventonChange';
+// import HandlingEventonSubmit from './components/HandlingEventonSubmit';
+// import ConditionalRendering from './components/ConditionalRendering';
+// import TernaryOperator from './components/TernaryOperator';
+import LogicalOperator from './components/LogicalOperator';
 
 
 function App() {
   return (
     <div className='container text'>
+      <LogicalOperator/>
+      {/* <TernaryOperator/> */}
+      {/* <ConditionalRendering/> */}
+      {/* <HandlingEventonSubmit/> */}
+      {/* <HandlingEventonChange/> */}
+      {/* <HandlingEvents/> */}
       {/* <h2>State</h2> */}
-      <Counter/>
+      {/* <Counter/> */}
       
       {/* props */}
       {/* <ParentComponent/> */}
