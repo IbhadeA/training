@@ -1,46 +1,35 @@
 // this app.js is the root/main component that wraps other components
 import './App.css';
-// import Header from './components/Header';
-// import Greet from './components/Greet';
-// import Name from './components/Name';
-// import Job from './components/Job';
-// import Hobbies from './components/Hobbies';
-// import ParentComponent from './components/props/ParentComponent';
-// import Counter from './components/props/Counter';
-// import HandlingEvents from './components/HandlingEvents';
-// import HandlingEventonChange from './components/HandlingEventonChange';
-// import HandlingEventonSubmit from './components/HandlingEventonSubmit';
-// import ConditionalRendering from './components/ConditionalRendering';
-// import TernaryOperator from './components/TernaryOperator';
-import LogicalOperator from './components/LogicalOperator';
+// import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Navbar from "./pages/Navbar";
+import React, { useRef } from 'react';
 
+function MyComponent() {
+  const ref = useRef(null);
 
-function App() {
   return (
-    <div className='container text'>
-      <LogicalOperator/>
-      {/* <TernaryOperator/> */}
-      {/* <ConditionalRendering/> */}
-      {/* <HandlingEventonSubmit/> */}
-      {/* <HandlingEventonChange/> */}
-      {/* <HandlingEvents/> */}
-      {/* <h2>State</h2> */}
-      {/* <Counter/> */}
-      
-      {/* props */}
-      {/* <ParentComponent/> */}
-      
-      {/* components */}
-      {/* <Name/>
-      <Job/>
-      <Hobbies/> */}
-     
-      {/* <Header/>
-      <Greet/> */}
-    
-
+    <div ref={ref}>
+      Hello, World!
     </div>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <Router>
+      <Navbar/>
+
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
+  </Router>
+  );
+}
+
+// React router is a vital library for creating multiple page application inreact and managing navigation within them
